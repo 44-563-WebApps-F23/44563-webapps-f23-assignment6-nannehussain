@@ -15,7 +15,7 @@ integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R
 integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 <form>
     <label for="form1_age">The hidden author name</label>
-    <input type ="password" id="form1_age" name="form1_age" min=10 max=50 step=2 value="John Lennon"> <br>
+    <input type ="password" id="form1_age" name="form1_age" min=10 max=50 step=2 value="Dickens"> <br>
     <label for="form1_nick">Guess the author </label>
     <input type ="text" id="form1_nick" name="form1_nick" autofocus > <br>
     <input type="button" onclick="checkGuess()" value="Check the guess">
@@ -26,101 +26,28 @@ integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0Ec
     let wrong=0;
     let count=0;  
     function checkGuess(){
-
- 
-
-        console.log("Getting form values")  
-
- 
-
         name1 = document.getElementById("form1_age").value  
-
- 
-
         name2 = document.getElementById("form1_nick").value  
-
- 
-
         confirmed = confirm("Are these the values? "+name1+" and "+name2)            
-
- 
-
         out = document.getElementById("result")
-
- 
-
         if(name1==name2){
-
- 
-
             count=0  
-
- 
-
             correct=correct+1;  
-
- 
-
             alert("You got it right");  
-
- 
-
         }else {
-
- 
-
             if(count<7){
-
- 
-
                 wrong=wrong+1
-
- 
-
                 count=count+1
-
- 
-
                 alert("Access denied")
 
- 
-
             }  
-
- 
-
             else{
-
- 
-
                 alert("Sorry, ran out og guesses.")  
-
- 
-
             }    
-
- 
-
         }
-
- 
-
         out.innerHTML="correct "+correct+"  wrong "+wrong
-
- 
-
     }
-
- 
-
- 
-
- 
-
 </script>  
-
- 
-
 </script>  
 </script>  
 
@@ -140,7 +67,7 @@ integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0Ec
 
                 case 1:
 
-                    out.src="b1.jpg"
+                    out.src="Hyderabad.jpg"
 
                     useImage=useImage+1
 
@@ -148,7 +75,7 @@ integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0Ec
 
                 case 2:
 
-                    out.src="b2.jpg"
+                    out.src="Clock_Tower_Secunderabad.jpg"
 
                     useImage=useImage+1
 
@@ -156,15 +83,11 @@ integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0Ec
 
                 case 3:
 
-                    out.src="b3.jpg"
+                    out.src="Agra.jpg"
 
                     useImage=1
 
-                    break;
-
-                default:
-
-                    out.src="b1.jpg"                
+                    break;               
 
             }
 
