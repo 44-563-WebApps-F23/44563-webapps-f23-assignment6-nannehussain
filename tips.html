@@ -47,38 +47,23 @@
  
 
     <script>
-
         function tips() {
 
- 
-
             const ba = parseFloat(document.getElementById('baseInput').value);
-
- 
 
             const tip = parseFloat(document.getElementById('tipInput').value);
 
  
-
-         
-
             let toShow = "";
 
  
-
-           
-
             for (let i = 0; i < 5; i++) {
-
- 
 
                 const calculatedTip = ba * (tip + i * 4) / 100;
 
                 toShow += `${tip + i * 4}% is ${calculatedTip.toFixed(2)}; `;
 
             }
-
- 
 
             const tipResultsElement = document.getElementById('tipResults');
 
@@ -87,19 +72,12 @@
         }
 
     </script>
-
 <form>
-
     <label>
-
         <input type="radio" name="operation" value="sum" onclick="chooseOp()"> Sum
-
     </label>
-
     <label>
-
         <input type="radio" name="operation" value="difference" onclick="chooseOp()"> Difference
-
     </label>
 
     <label>
@@ -119,27 +97,14 @@
  
 
 <script>
-
     function chooseOp() {
-
- 
-
         const ba = parseFloat(document.getElementById('baseInput').value);
 
- 
-
         const tip = parseFloat(document.getElementById('tipInput').value);
-
- 
-
         const so = document.querySelector('input[name="operation"]:checked').value;
 
- 
-
         let result;
-
         switch (so) {
-
             case 'sum':
 
                 result = ba + tip;
@@ -155,23 +120,13 @@
             case 'product':
 
                 result = ba * tip;
-
                 break;
-
             default:
-
                 result = 'Invalid operation';
-
         }
 
- 
-
-       
-
         const operationResultsElement = document.getElementById('operationResults');
-
         operationResultsElement.innerHTML = `${so} of ${ba} and ${tip} is ${result}`;
-
     }
 
 </script>
